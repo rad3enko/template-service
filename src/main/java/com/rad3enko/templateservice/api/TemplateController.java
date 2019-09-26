@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -59,10 +60,10 @@ public class TemplateController {
     }
 
     @GetMapping(value = "list")
-    public Set<String> listTemplates() {
+    public List<String> listTemplates() {
         return templateService.listTemplates().stream()
                               .map(Template::getName)
-                              .collect(Collectors.toSet());
+                              .collect(Collectors.toList());
     }
 
 }
