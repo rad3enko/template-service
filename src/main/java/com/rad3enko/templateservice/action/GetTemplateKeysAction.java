@@ -35,7 +35,8 @@ public class GetTemplateKeysAction extends BaseAction<Set<String>, GetTemplateKe
 
         Set<String> keys = new HashSet<>();
 
-        while(matcher.find()) keys.add(matcher.group(0));
+        while (matcher.find()) keys.add(matcher.group(0)
+                                               .replaceAll("[\\$\\{\\}]", ""));
 
         return keys;
     }

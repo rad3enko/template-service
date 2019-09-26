@@ -5,6 +5,7 @@ import com.rad3enko.templateservice.action.argument.GetFilledTemplateActionArgum
 import com.rad3enko.templateservice.action.argument.GetTemplateKeysActionArgument;
 import com.rad3enko.templateservice.api.dto.CreateTemplateDto;
 import com.rad3enko.templateservice.api.dto.FillTemplateInDto;
+import com.rad3enko.templateservice.model.Template;
 import com.rad3enko.templateservice.service.TemplateService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Created on 26.09.2019.
@@ -56,9 +58,11 @@ public class TemplateController {
                                                                               .build());
     }
 
-//    @GetMapping(value = "list")
-//    public Set<String> listTemplates() {
-//        return temSe
-//    }
+    @GetMapping(value = "list")
+    public Set<String> listTemplates() {
+        return templateService.listTemplates().stream()
+                              .map(Template::getName)
+                              .collect(Collectors.toSet());
+    }
 
 }
