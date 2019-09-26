@@ -1,5 +1,6 @@
 package com.rad3enko.templateservice.action;
 
+import com.rad3enko.templateservice.action.argument.ActionArgument;
 import com.rad3enko.templateservice.action.argument.GetFilledTemplateActionArgument;
 import com.rad3enko.templateservice.service.TemplateService;
 import lombok.RequiredArgsConstructor;
@@ -13,12 +14,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class GetFilledTemplateAction implements Action<String, GetFilledTemplateActionArgument> {
+public class GetFilledTemplateAction extends BaseAction<String, GetFilledTemplateActionArgument> {
 
     private final TemplateService templateService;
 
     @Override
-    public String execute(GetFilledTemplateActionArgument arg) {
+    protected String executeImpl(GetFilledTemplateActionArgument argument) {
         return null;
     }
 }
