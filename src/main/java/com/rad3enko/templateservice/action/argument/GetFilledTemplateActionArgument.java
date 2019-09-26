@@ -1,9 +1,6 @@
 package com.rad3enko.templateservice.action.argument;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.util.StringUtils;
 
 import java.util.Map;
@@ -17,10 +14,11 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class GetFilledTemplateActionArgument implements ActionArgument {
 
     private String name;
-    private Map<String, Object> keymap;
+    private Map<String, Object> keyMap;
 
     @Override
     public boolean validate() {
