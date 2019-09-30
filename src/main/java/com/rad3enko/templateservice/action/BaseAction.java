@@ -11,8 +11,8 @@ public abstract class BaseAction<Target, ArgumentType extends ActionArgument> im
 
     @Override
     public Target execute(ActionArgument argument) {
-        if(!argument.validate()) throw new RuntimeException("Action argument is not valid!");
-        return executeImpl((ArgumentType)argument);
+        if (!argument.validate()) throw new RuntimeException("Action argument is not valid!");
+        return executeImpl((ArgumentType) argument);
     }
 
     protected abstract Target executeImpl(ArgumentType argument);

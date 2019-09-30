@@ -7,7 +7,6 @@ import com.rad3enko.templateservice.api.dto.CreateTemplateInDto;
 import com.rad3enko.templateservice.api.dto.FillTemplateInDto;
 import com.rad3enko.templateservice.model.Template;
 import com.rad3enko.templateservice.service.TemplateService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +38,7 @@ public class TemplateController {
     }
 
     @PostMapping(value = "create")
-    public void create(CreateTemplateInDto createTemplateInDto) {
+    public void create(@RequestBody CreateTemplateInDto createTemplateInDto) {
         templateService.create(createTemplateInDto.getName(),
                                createTemplateInDto.getValue());
     }

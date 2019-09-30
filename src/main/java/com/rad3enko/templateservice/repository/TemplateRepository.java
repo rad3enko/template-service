@@ -4,8 +4,6 @@ import com.rad3enko.templateservice.model.Template;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 
 /**
  * Created on 26.09.2019.
@@ -15,5 +13,6 @@ import java.util.List;
 @Repository
 public interface TemplateRepository extends JpaRepository<Template, String> {
     boolean existsByName(String name);
+
     Template findByName(String name);
 }

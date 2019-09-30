@@ -13,12 +13,14 @@ public interface TemplateService {
 
     /**
      * Creates new template of provided value and name
+     *
      * @param value template text
      */
     void create(String name, String value);
 
     /**
      * Template with provided name
+     *
      * @param name template name
      * @return filled template
      */
@@ -26,6 +28,7 @@ public interface TemplateService {
 
     /**
      * List of all templates
+     *
      * @return list of templates
      */
     List<Template> listTemplates();
