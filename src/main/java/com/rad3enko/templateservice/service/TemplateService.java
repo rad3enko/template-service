@@ -1,7 +1,6 @@
 package com.rad3enko.templateservice.service;
 
 import com.rad3enko.templateservice.model.Template;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

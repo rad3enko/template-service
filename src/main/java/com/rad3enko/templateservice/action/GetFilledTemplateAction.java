@@ -41,9 +41,9 @@ public class GetFilledTemplateAction extends BaseAction<String, GetFilledTemplat
             return writer.toString();
 
         } catch (IOException e) {
-            throw new RuntimeException("Не удалось прочитать шаблон " + template.getName());
+            throw new RuntimeException("Unable to recognize template: " + template.getName());
         } catch (TemplateException e) {
-            throw new RuntimeException("Не удалось заполнить текст по шаблону " + template.getName());
+            throw new RuntimeException("Unable to fill placeholders for template: " + template.getName());
         }
     }
 }

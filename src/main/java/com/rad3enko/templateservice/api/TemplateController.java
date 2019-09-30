@@ -3,7 +3,7 @@ package com.rad3enko.templateservice.api;
 import com.rad3enko.templateservice.action.Action;
 import com.rad3enko.templateservice.action.argument.GetFilledTemplateActionArgument;
 import com.rad3enko.templateservice.action.argument.GetTemplateKeysActionArgument;
-import com.rad3enko.templateservice.api.dto.CreateTemplateDto;
+import com.rad3enko.templateservice.api.dto.CreateTemplateInDto;
 import com.rad3enko.templateservice.api.dto.FillTemplateInDto;
 import com.rad3enko.templateservice.model.Template;
 import com.rad3enko.templateservice.service.TemplateService;
@@ -39,9 +39,9 @@ public class TemplateController {
     }
 
     @PostMapping(value = "create")
-    public void create(CreateTemplateDto createTemplateDto) {
-        templateService.create(createTemplateDto.getName(),
-                               createTemplateDto.getValue());
+    public void create(CreateTemplateInDto createTemplateInDto) {
+        templateService.create(createTemplateInDto.getName(),
+                               createTemplateInDto.getValue());
     }
 
     @GetMapping(value = "{template_name}/keys")

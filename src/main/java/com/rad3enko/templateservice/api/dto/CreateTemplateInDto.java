@@ -12,7 +12,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class CreateTemplateDto {
+public class CreateTemplateInDto {
     private String name;
     private String value;
 }

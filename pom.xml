@@ -20,6 +20,8 @@
         <junit.version>1.5.2</junit.version>
         <mockito.version>3.0.0</mockito.version>
         <assertj.version>3.13.2</assertj.version>
+        <jupiter-tools.version>0.2</jupiter-tools.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
 
     <dependencies>
@@ -93,6 +95,18 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jupiter-tools</groupId>
+            <artifactId>spring-test-jpa</artifactId>
+            <version>${jupiter-tools.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jupiter-tools</groupId>
+            <artifactId>spring-test-postgres</artifactId>
+            <version>${jupiter-tools.version}</version>
         </dependency>
     </dependencies>
 
