@@ -19,7 +19,7 @@
         <jupiter.version>5.5.2</jupiter.version>
         <junit.version>1.5.2</junit.version>
         <mockito.version>3.0.0</mockito.version>
-        <assertj.version>3.13.2</assertj.version>
+        <assertj.version>3.27.7</assertj.version>
         <jupiter-tools.version>0.2</jupiter-tools.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
